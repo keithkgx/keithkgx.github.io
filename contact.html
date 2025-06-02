@@ -1,15 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact - Keith</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — Keith Koh</title>
+  <style>
+    /* Global box-sizing */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* === Global & Layout === */
+    html, body { margin: 0; height: 100%; }
+    body {
+      display: grid;
+      grid-template-rows: auto 1fr; /* navbar | main */
+      height: 100vh;
+      font-family: sans-serif;
+      color: #000;
+      background: #fff;
+    }
+    nav {
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: #007bff; }
+
+    main {
+      grid-row: 2;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    /* === Hero === */
+    .hero {
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    .hero h2 {
+      font-size: 1.3rem;
+      margin-bottom: .75rem;
+      font-weight: 400;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* === Contact Links (icons) === */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .contact-links a,
+    .contact-links span {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #007bff;
+    }
+    .contact-links span { cursor: default; }
+    .contact-links img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* === Form === */
+    .contact-form {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: .75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      display: block;
+      width: 100%;
+      padding: .75rem;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <nav>...same nav as above...</nav>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonial.html">Testimonials</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
   <main>
-    <h1>Contact Me</h1>
-    <p>Email: <a href="mailto:keith@example.com">keith@example.com</a></p>
-    <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
+    <div class="hero">
+      <h1>Contact</h1>
+      <h2>Let’s get in touch.</h2>
+      <p>I’m always open to new opportunities, collaborations, or just a chat.</p>
+    </div>
+
+    <div class="contact-links">
+      <!-- GitHub -->
+      <a href="https://github.com/keithkohgx" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub">
+        GitHub
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/keithkohgx" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn">
+        LinkedIn
+      </a>
+      <!-- Email -->
+      <a href="mailto:keithkohgx@gmail.com">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gmail.svg" alt="Email">
+        keithkohgx@gmail.com
+      </a>
+      <!-- Telegram (static) -->
+      <span>
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/telegram.svg" alt="Telegram">
+        @Keithkgx
+      </span>
+    </div>
+
+    <!-- Web3Forms Integration -->
+    <form class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST">
+      <!-- replace with your real access key -->
+      <input type="hidden" name="access_key" value="76860996-7cbc-49ab-bd38-962b06472704" />
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </main>
+
 </body>
 </html>

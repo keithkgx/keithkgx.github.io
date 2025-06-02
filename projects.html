@@ -1,17 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Projects - Keith</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Projects — Keith Koh</title>
+  <style>
+    html, body { margin:0; height:100%; }
+    body {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+      font-family: sans-serif;
+      color: #000;
+      background: #fff;
+    }
+    /* Navbar */
+    nav {
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: #007bff }
+
+    /* Main content */
+    main {
+      grid-row: 2;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .hero {
+      margin-bottom: 2rem;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    .hero h2 { font-size: 1.3rem; margin-bottom: .75rem; font-weight:400; }
+    .hero p  { font-size: 1rem; max-width:600px; margin:0 auto; }
+
+    /* Boxes mirror Experience width */
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: left;
+    }
+    .box h3 {
+      margin: 0 0 .5rem;
+      font-size: 1.2rem;
+    }
+    .box p {
+      margin: 0 0 1rem;
+      line-height: 1.4;
+      color: #555;
+    }
+    .box a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
-  <nav>...same nav as above...</nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonial.html">Testimonials</a>
+  </nav>
+
+
   <main>
-    <h1>Projects</h1>
-    <ul>
-      <li><strong>Project A:</strong> Description here</li>
-      <li><strong>Project B:</strong> Description here</li>
-    </ul>
+    <div class="hero">
+      <h1>Projects</h1>
+      <h2>Some fun stuff I worked on in the past.</h2>
+      <p>I'm open to collaborating on projects, do reach out!</p>
+    </div>
+
+    <div class="boxes">
+      <div class="box">
+        <h3>Sportify</h3>
+        <p>Basketball fans, especially die-hard enthusiasts, are passionate about analyzing their favorite teams and players beyond just watching matches. Fans spend hours hunting down disparate stats, manually compiling spreadsheets.<br /><br />
+        Sportify unifies these data for head-to-head comparisons, and trend analysis. Users can view in-depth player and team statistics across the NBA league.<br /><br />
+        Check out the Sportify page!</p>
+        <a href="#">See More</a>
+      </div>
+
+      <div class="box">
+        <h3>UID Extractor</h3>
+        <p>
+          At my internship, I was receiving and opening hundreds of trade-confirmation emails a day, each with a PDF attachment, to extract a single unique ID into Excel.<br /><br />
+          To automate this process, I wrote a Python script that:<br />
+          1. Scans unread Outlook emails in a target folder<br />
+          2. Opens and parses each attached PDF<br />
+          3. Extracts its unique trade ID<br />
+          4. Appends that ID into a centralized Excel log.<br /><br />
+          Now what took an hour could be done in minutes. Unfortunately I’m not able to share more as this project was done during my internship term.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>ID Validation Tool</h3>
+        <p>
+          At my internship, trades are done within the Intercontinental Exchange (ICE). Manually keying ICE trades into our back-end system inevitably led to missing or mistyped IDs.<br /><br />
+          Using Excel VBA I built a validation tool that cross-checks each ICE trade ID against our internal database, flags any IDs that aren't found, and presents an error report. This ultimately led to a lower error rate.<br /><br />
+          Unfortunately I’m not able to share more as this project was done during my internship term.
+        </p>
+      </div>
+    </div>
   </main>
+
 </body>
 </html>

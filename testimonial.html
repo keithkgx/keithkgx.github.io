@@ -1,16 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Testimonials - Keith</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Testimonials — Keith Koh</title>
+  <style>
+    html, body { margin: 0; height: 100%; }
+    body {
+      display: grid;
+      grid-template-rows: auto 1fr; /* navbar / main */
+      height: 100vh;
+      font-family: sans-serif;
+      color: #000;
+      background: #fff;
+    }
+    /* Navbar */
+    nav {
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    nav a:hover { color: #007bff }
+
+    /* Main */
+    main {
+      grid-row: 2;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    /* Hero text */
+    .hero {
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    .hero h2 {
+      font-size: 1.3rem;
+      margin-bottom: .75rem;
+      font-weight: 400;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Boxes (same as Projects & Blog) */
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .box .quote {
+      font-style: italic;
+      margin: 0 0 .5rem;
+      color: #000;
+    }
+    .box .author {
+      margin: 0 0 1rem;
+      color: #555;
+    }
+    .box a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
-  <nav>...same nav as above...</nav>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonial.html">Testimonials</a>
+  </nav>
+
+
+
+  <!-- MAIN -->
   <main>
-    <h1>Testimonials</h1>
-    <blockquote>
-      “Keith is a fast learner and a reliable team member.” — Jane Doe, Mentor
-    </blockquote>
+    <div class="hero">
+      <h1>Testimonials</h1>
+      <h2>What people say about me.</h2>
+      <p>A few kind words from colleagues and professors.</p>
+    </div>
+
+    <div class="boxes">
+      <!-- 1st Testimonial -->
+      <div class="box">
+        <p class="quote">
+          "Keith worked diligently through the numerous rounds of revisions for his final research paper that scrutinised the conditions under which euthanasia might be morally and legally permissible. The arguments that Keith marshalled in support of his thesis not only display his strong analytical skills, they also express intellectual courage in tackling a research topic that some may find too complex or controversial to affirm a position in. <br /><br/>
+          ...a candidate whom I highly recommend with no reservations.”
+        </p>
+        <p class="author">
+          - (Dr) Zhou Ziqian Jan, Senior Lecturer at NUS
+        </p>
+        <a href="full-testimonial-chair.html">Read full</a>
+      </div>
+      <!-- 2nd Testimonial -->
+      <div class="box">
+        <p class="quote">
+          “xxx”
+        </p>
+        <p class="author">
+          - Chair June, Senior Product Manager at Changi Airport Group
+        </p>
+        <a href="full-testimonial-chair.html">Read full</a>
+      </div>
+    </div>
   </main>
+
 </body>
 </html>
